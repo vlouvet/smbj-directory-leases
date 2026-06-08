@@ -34,6 +34,9 @@ See [`directory-lease-project/`](directory-lease-project/):
 - `server/` — a reproducible Dockerised Samba 4.23 test server + a benchmark harness.
 - `BENCHMARK.md` — measured results: repeat listing/search on a deep tree drops from ~hundreds
   of ms to ~1–2 ms (requests eliminated, not just wall-clock).
+- [`CYBERDUCK.md`](directory-lease-project/CYBERDUCK.md) — **end-to-end guide** for running this
+  build in Cyberduck (GUI) or the `duck` CLI: build the jar, swap it in, re-sign, and verify
+  leases are granted.
 
 ## Running the live tests
 ```bash
