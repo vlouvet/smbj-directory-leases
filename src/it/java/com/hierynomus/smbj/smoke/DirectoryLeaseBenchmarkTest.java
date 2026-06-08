@@ -48,6 +48,7 @@ import com.hierynomus.smbj.share.LeasedDirectoryCache;
  * Run:
  *   SMBJ_BENCH=1 SMBJ_IT_HOST=localhost ./gradlew integrationTest --tests "*DirectoryLeaseBenchmarkTest"
  */
+@org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable(named = "SMBJ_IT_HOST", matches = ".+")
 public class DirectoryLeaseBenchmarkTest {
     private static String env(String k, String def) {
         String v = System.getenv(k);

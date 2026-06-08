@@ -44,6 +44,7 @@ import com.hierynomus.smbj.share.File;
  * (b) an external mutation breaks the lease, invalidating the cache so the next list() re-queries
  *     and reflects the change (the correctness invariant — never serve stale across a break).
  */
+@org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable(named = "SMBJ_IT_HOST", matches = ".+")
 public class DirectoryLeaseCacheIntegrationTest {
     private static String env(String k, String def) {
         String v = System.getenv(k);

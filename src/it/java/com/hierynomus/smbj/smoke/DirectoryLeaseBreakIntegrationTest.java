@@ -43,6 +43,7 @@ import com.hierynomus.smbj.share.File;
  * directory lease on connection A, mutates the directory from connection B, and asserts A
  * receives + handles the break (connection survives, lease state drops, cache bumped).
  */
+@org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable(named = "SMBJ_IT_HOST", matches = ".+")
 public class DirectoryLeaseBreakIntegrationTest {
     private static String env(String k, String def) {
         String v = System.getenv(k);

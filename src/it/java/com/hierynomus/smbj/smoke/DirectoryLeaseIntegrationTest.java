@@ -41,6 +41,7 @@ import com.hierynomus.smbj.share.DiskShare;
  * Live directory-lease tests against the Samba 4.23.8 dir-lease server on .12.
  * Run: SMBJ_IT_HOST=localhost ./gradlew integrationTest --tests "*DirectoryLeaseIntegrationTest"
  */
+@org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable(named = "SMBJ_IT_HOST", matches = ".+")
 public class DirectoryLeaseIntegrationTest {
     private static String env(String k, String def) {
         String v = System.getenv(k);

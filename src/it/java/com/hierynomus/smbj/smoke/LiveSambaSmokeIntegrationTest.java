@@ -42,6 +42,7 @@ import com.hierynomus.smbj.share.DiskShare;
  * connect the share, enumerate it, AND the server advertises directory leasing
  * (the precondition for every later milestone).
  */
+@org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable(named = "SMBJ_IT_HOST", matches = ".+")
 public class LiveSambaSmokeIntegrationTest {
 
     private static String env(String k, String def) {
