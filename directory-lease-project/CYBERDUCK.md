@@ -56,7 +56,7 @@ cp build/libs/smbj-*.jar "$DST/Contents/Resources/$BUNDLED_NAME"
 
 # (Recommended) give the copy a distinct identity so it can't clobber your real
 # Cyberduck's prefs/keychain or get confused in LaunchServices:
-/usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ch.sudo.cyberduck.smbjtest" "$DST/Contents/Info.plist"
+/usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ch.sudo.cyberduck.dirlease" "$DST/Contents/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleName Cyberduck-smbj" "$DST/Contents/Info.plist"
 
 # Re-sign ad-hoc (drops hardened runtime so the modified bundle loads) and de-quarantine.
